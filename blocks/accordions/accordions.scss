@@ -1,25 +1,37 @@
 @import "../../src/css/scss/variable";
-@import "../../src/css/scss/typo";
 @import "../../src/css/scss/global";
 
 .faq__wraper {
   display: flex;
-  gap: 20px;
+  // gap: 20px;
   @media #{$sm} {
     flex-wrap: wrap;
     gap: 0;
   }
   .col {
-    width: calc(50% - 20px);
+    width: calc(50%);
     @media #{$sm} {
       width: 100%;
+    }
+    &:nth-child(1) {
+      padding-right: 10px;
+      @media #{$sm} {
+        padding-right: 0px;
+      }
+    }
+    &:nth-child(2) {
+      padding-left: 10px;
+      @media #{$sm} {
+        padding-left: 0px;
+      }
     }
   }
 }
 .faq {
   .accordion {
     margin-bottom: 24px;
-    border: 2px solid $main;
+    background-color: $light;
+    border: 2px solid $light;
     .question {
       font-size: 18px;
       line-height: 26px;
@@ -41,10 +53,7 @@
         padding: 10px 50px 10px 20px;
         position: relative;
         &:after {
-          content: "";
-          background-image: url(../../src/img/acco-arrow.png);
-          width: 21px;
-          height: 13px;
+          content: "+";
           position: absolute;
           top: 50%;
           transform: translate(0, -50%);
@@ -83,10 +92,16 @@
   .accordion.active {
     // background-color: $light;
     background-color: rgba(259, 259, 259, 1);
+    border: 2px solid $main;
     .question {
       //   border-bottom: 1px solid $main;
       svg {
         transform: rotate(180deg);
+      }
+      span {
+        &:after {
+          content: "-";
+        }
       }
     }
     .answer {

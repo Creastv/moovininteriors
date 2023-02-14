@@ -22,6 +22,7 @@ require get_template_directory() . '/blocks/blocks.php';
 function add_block_editor_assets(){
   wp_enqueue_style('block_editor_css', get_template_directory_uri().'/src/css/go-admin.min.css');
 }
+add_action('enqueue_block_editor_assets','add_block_editor_assets',10,0);
 // Paginacja
 function pagination_bars() {
     global $wp_query;

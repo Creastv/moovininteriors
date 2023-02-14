@@ -30,7 +30,18 @@ h6,
     font-size: 28px;
   }
 }
-
+.section-h {
+  font-size: 38px;
+  line-height: 44px;
+  @media #{$lg} {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  @media #{$sm} {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 li {
   margin-bottom: 20px;
 }
@@ -46,11 +57,15 @@ ol {
 }
 
 a {
-  color: $main;
+  // color: $main;
   text-decoration: none;
   transition: all 0.1s linear;
+  font-weight: 500;
 }
 .entry-content {
+  a {
+    color: $main;
+  }
   p,
   li,
   a {

@@ -1,9 +1,13 @@
 <?php
 $colOne = get_field('col_one');
 $colTwo = get_field('col_two');
+$title = get_field('title');
 ?>
 <div id="faq">
     <div class="faq js">
+        <?php if($title) { ?>
+        <h2 class="section-h text-center"><?php echo $title; ?></h2>
+        <?php } ?>
 
         <div class="faq__wraper">
             <?php if($colOne) { ?>

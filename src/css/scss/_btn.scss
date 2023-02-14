@@ -1,5 +1,5 @@
 .btn {
-  color: #fff;
+  color: #fff !important;
   padding: 20px 30px;
   background-color: $main;
   background: rgb(95, 2, 31);
@@ -27,6 +27,8 @@
   transition: 0.1s linear;
   font-weight: 500;
   font-size: 16px;
+  display: inline-block;
+  align-items: center;
   &:hover {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.51);
   }

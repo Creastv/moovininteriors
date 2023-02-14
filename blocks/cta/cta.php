@@ -1,20 +1,24 @@
 <?php
-$display = get_field('display_cta');
+$link = get_field('button_cta');
+$headline = get_field('headline_cta');
+$bg = get_field('background_image');
+$full = get_field('full_width');
 
-$link = get_field('button_cta', 'options');
-$headline = get_field('headline_cta', 'options');
-$bg = get_field('background_image', 'options');
-
+$wraper = "";
+$container = "container-fluid";
+if($full) {
+    $wraper = "wrap-full";
+    $container = "container";
+}
 if( $link ){
     $link_url = $link['url'];
     $link_title = $link['title'];
     $link_target = $link['target'] ? $link['target'] : '_self';
 }
 ?>
-<?php if($display) : ?>
 
-<div class="b__cta" style="background-image:url(<?php echo $bg; ?>);">
-    <div class="container-fluid">
+<div class="b__cta <?php echo $wraper; ?>" style="background-image:url(<?php echo $bg; ?>);">
+    <div class="<?php echo $container; ?>">
         <div class="row">
             <div class="b__cta__wraper">
                 <div class="b__cta__left">
@@ -36,4 +40,3 @@ if( $link ){
     <span class="go__bg"></span>
     <span class="go__bg__two"></span>
 </div>
-<?php endif;?>

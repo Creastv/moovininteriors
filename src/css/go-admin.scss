@@ -4,7 +4,8 @@
 @import "scss/single";
 @import "scss/archive";
 @import "scss/page";
+@import "scss/btn";
+@import "scss/form";
 
-.wp-block-spacer {
-  background-color: red !important;
-}
+@import "scss/footer/footer-cta";
+@import "scss/footer/footer-get-know";

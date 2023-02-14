@@ -51,10 +51,10 @@
                 </div>
             </div>
         </div>
-        <div class="header__bg"></div>
-        <div class="header__bg__two"></div>
+        <span class="go__bg"></span>
+        <span class="go__bg__two"></div>
     </header>
 
     <main id="main">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">

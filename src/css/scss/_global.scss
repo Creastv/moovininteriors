@@ -59,15 +59,15 @@ body {
       padding-right: 15px;
     }
   }
-  .entry-content {
-    padding-left: 160px;
-    @media #{$lg} {
-      padding-left: 80px;
-    }
-    @media #{$sm} {
-      padding-left: 0px;
-    }
-  }
+  // .entry-content {
+  //   padding-left: 160px;
+  //   @media #{$lg} {
+  //     padding-left: 80px;
+  //   }
+  //   @media #{$sm} {
+  //     padding-left: 0px;
+  //   }
+  // }
 }
 
 #error {
@@ -134,4 +134,19 @@ body {
   flex-wrap: wrap;
   width: 100%;
   gap: 10px;
+}
+
+.go__bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(95, 2, 31, 0.27);
+}
+.go__bg__two {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.57);
 }

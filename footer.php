@@ -1,15 +1,29 @@
 </div>
 </div>
 </main>
+
+<?php get_template_part('templates-parts/footer/footer', 'form'); ?>
+<?php get_template_part('templates-parts/footer/footer', 'get-know'); ?>
+<?php get_template_part('templates-parts/footer/footer', 'opinions'); ?>
+<?php get_template_part('templates-parts/footer/footer', 'cta'); ?>
+
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="container-fluid">
         <div class="row">
             <?php get_template_part('templates-parts/footer/footer', 'localization'); ?>
             <hr>
-            <?php get_template_part('templates-parts/footer/footer', 'main'); ?>
+            <div class="f__main__wraper ">
+                <div class="col">
+                    <?php get_template_part('templates-parts/footer/footer', 'main'); ?>
+                </div>
+                <div class="col">
+                    <?php get_template_part('templates-parts/footer/footer', 'contact'); ?>
+                </div>
+            </div>
             <hr>
             <div class="f__info__wraper ">
-                <div class="col"><?php get_template_part('templates-parts/footer/footer', 'info'); ?></div>
+                <div class="col"><?php get_template_part('templates-parts/footer/footer', 'info'); ?>
+                </div>
                 <div class="col"><?php get_template_part('templates-parts/footer/footer', 'socialmedia'); ?></div>
             </div>
         </div>
