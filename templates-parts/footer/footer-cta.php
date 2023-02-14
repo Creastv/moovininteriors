@@ -13,7 +13,7 @@ if( $link ){
 ?>
 <?php if($display) : ?>
 
-<div class="b__cta" style="background-image:url(<?php echo $bg; ?>);">
+<div class="b__cta b__cta--footer" style="background-image:url(<?php echo $bg; ?>);">
     <div class="container-fluid">
         <div class="row">
             <div class="b__cta__wraper">
