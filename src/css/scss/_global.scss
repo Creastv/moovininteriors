@@ -20,22 +20,56 @@ body {
 }
 
 .container {
-  max-width: 1555px;
+  max-width: 1330px;
+  width: 90%;
+  margin: 0 auto;
+  @media #{$sm} {
+    width: 100%;
+  }
+  .row {
+    padding-left: 50px;
+    padding-right: 50px;
+    @media #{$sm} {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media #{$xs} {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.container-fluid {
+  max-width: 1673px;
   width: 100%;
   margin: 0 auto;
   @media #{$md} {
     width: 100%;
   }
-}
-
-.row {
-  padding-left: 50px;
-  padding-right: 50px;
-  @media #{$sm} {
-    padding-left: 30px;
-    padding-right: 30px;
+  .row {
+    padding-left: 50px;
+    padding-right: 50px;
+    @media #{$lg} {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    @media #{$md} {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .entry-content {
+    padding-left: 160px;
+    @media #{$lg} {
+      padding-left: 80px;
+    }
+    @media #{$sm} {
+      padding-left: 0px;
+    }
   }
 }
+
 #error {
   h2 {
     margin-bottom: 30px;

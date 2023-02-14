@@ -51,23 +51,25 @@
     }
   });
   // sticy nabvbar
-  const navbar = document.querySelector("#header");
+  const navbar = document.querySelector(".js-navbar");
   document.addEventListener("scroll", () => {
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if (window.pageYOffset) {
       navbar.classList.add("active");
+      document.querySelector("#header").style.paddingTop = navbar.clientHeight + "px";
     } else {
       navbar.classList.remove("active");
+      document.querySelector("#header").style.paddingTop = "0";
     }
   });
 
   // set body padding top by geting header height
-  function heightHeader() {
-    const heightHeader = document.querySelector("#header");
-    document.querySelector("body").style.paddingTop = heightHeader.clientHeight + "px";
-  }
-  window.addEventListener("resize", heightHeader);
-  heightHeader();
+  // function heightHeader() {
+  //   const heightHeader = document.querySelector(".js-navbar");
+  //   document.querySelector("body").style.paddingTop = heightHeader.clientHeight + "px";
+  // }
+  // window.addEventListener("resize", heightHeader);
+  // heightHeader();
 
   //   // scroll to section
 })();

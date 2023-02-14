@@ -1,69 +1,113 @@
 footer {
+  position: relative;
+  background-color: #000;
+  background-image: url(../img/footer-bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
   margin-top: 50px;
-}
-.f-main {
-  border-top: 1px solid $black;
-  padding: 50px 15px;
-  .f-main__wraper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .f-main__col {
-      width: 50%;
-      @media #{$sm} {
-        width: 100%;
-        text-align: center !important;
-      }
-      img {
-        max-width: 90%;
-      }
-      p {
-        font-size: 12px;
-      }
-      &:nth-child(1) {
-      }
-      &:nth-child(2) {
-        text-align: right;
+  padding: 0 0 30px 0;
+  hr {
+    border: none;
+    border-top: 1px solid #808080;
+    background: none;
+  }
+  #bg-footer {
+    position: absolute;
+    bottom: 0px;
+    max-width: 60%;
+    height: auto;
+    opacity: 0.12;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+      a {
+        color: #fff;
+        font-size: 14px;
       }
     }
   }
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+  * {
+    color: #808080;
+  }
+}
+.f__loc {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  p {
     margin: 0;
-    margin-top: 30px;
-    @media #{$sm} {
-      justify-content: center;
-    }
-    li {
-      margin: 0;
-      &:first-child {
-        a {
-          padding-left: 0;
-        }
-      }
-      a {
-        color: $black;
-        font-size: 12px;
-        font-weight: 300;
-        padding: 10px 20px 10px 0;
-        @media #{$sm} {
-          padding: 10px;
-        }
-        &:hover {
-          color: $main;
-        }
-      }
-    }
+    padding: 0;
+    color: #fff;
   }
 }
 
+.f__info__wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$sm} {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
 .f__info {
-  text-align: center;
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+  padding: 23px 0;
+  @media #{$sm} {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+    order: 2;
+  }
   p {
-    font-size: 12px;
-    color: 989898;
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    @media #{$sm} {
+      margin-top: 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+  * {
+    color: #808080;
+  }
+}
+
+.f__socialmedia {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+  @media #{$sm} {
+    width: 100%;
+    justify-content: center;
+    order: 1;
+  }
+  ul {
+    display: flex;
+    gap: 10px;
+    li {
+      a {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
   }
 }

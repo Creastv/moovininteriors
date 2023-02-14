@@ -1,7 +1,9 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #252323;
+  overflow-x: hidden !important;
 }
 
 h1,
@@ -17,8 +19,9 @@ h6,
 .h5,
 .h6 {
   font-weight: 700;
-  color: #000;
+  color: #061322;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .h1 {
@@ -33,57 +36,33 @@ h6,
   }
 }
 
-p {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 300;
-}
-
 li {
   margin-bottom: 20px;
 }
 
-ul,
-ol {
-  font-size: 14px;
-  line-height: 22px;
-  margin-bottom: 30px;
-  font-weight: 300;
+p,
+li {
+  line-height: 26px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 
-span {
-  font-size: 14px;
-  line-height: 22px;
+ul,
+ol {
+  margin-bottom: 30px;
 }
 
 a {
-  color: #bc9c3b;
+  color: #5f031f;
   text-decoration: none;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
-  font-weight: 700;
 }
 
 .entry-content p,
 .entry-content li,
 .entry-content a {
   font-size: 14px;
-}
-
-.t-page {
-  padding: 50px 0;
-}
-
-.t-page .entry-title {
-  margin: 0;
-  font-size: 36px;
-  font-weight: 300;
-}
-
-@media only screen and (max-width: 768px) {
-  .t-page .entry-title {
-    font-size: 28px;
-  }
 }
 
 .text-center {
@@ -96,9 +75,9 @@ a {
 
 .underline {
   text-decoration: underline;
-  -webkit-text-decoration-color: #bc9c3b;
+  -webkit-text-decoration-color: #5f031f;
   /* Safari */
-  text-decoration-color: #bc9c3b;
+  text-decoration-color: #5f031f;
 }
 
 html {
@@ -125,26 +104,80 @@ body {
 }
 
 .container {
-  max-width: 1555px;
-  width: 100%;
+  max-width: 1330px;
+  width: 90%;
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 998px) {
+@media only screen and (max-width: 768px) {
   .container {
     width: 100%;
   }
 }
 
-.row {
+.container .row {
   padding-left: 50px;
   padding-right: 50px;
 }
 
 @media only screen and (max-width: 768px) {
-  .row {
+  .container .row {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .container .row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container-fluid {
+  max-width: 1673px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 998px) {
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+.container-fluid .row {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container-fluid .row {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 998px) {
+  .container-fluid .row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container-fluid .entry-content {
+  padding-left: 160px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container-fluid .entry-content {
+    padding-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid .entry-content {
+    padding-left: 0px;
   }
 }
 
@@ -201,7 +234,7 @@ body {
 }
 
 #go-to-top svg path {
-  fill: #bc9c3b;
+  fill: #5f031f;
   -webkit-transition: all 0.2s liner;
   transition: all 0.2s liner;
 }
@@ -263,7 +296,7 @@ body {
 
 .faq .accordion {
   margin-bottom: 24px;
-  border: 2px solid #bc9c3b;
+  border: 2px solid #5f031f;
 }
 
 .faq .accordion .question {
@@ -312,7 +345,7 @@ body {
   right: 15px;
   display: block;
   font-size: 24px !important;
-  color: #bc9c3b;
+  color: #5f031f;
 }
 
 .faq .accordion .question svg {

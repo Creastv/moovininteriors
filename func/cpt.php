@@ -1,13 +1,13 @@
 <?php 
 //////////////////////////////////////////////////////////////offers
-function go_post_types_licytacje() {
+function go_post_types_mieszkania() {
 
 	$labels = array(
-		'name'               => 'Licytacje',
-		'singular_name'      => 'Licytacje',
-		'menu_name'          => 'Licytacje',
-		'name_admin_bar'     => 'Licytacje',
-		'all_items'          => 'Licytacje',
+		'name'               => 'Mieszkania',
+		'singular_name'      => 'Mieszkania',
+		'menu_name'          => 'Mieszkania',
+		'name_admin_bar'     => 'Mieszkania',
+		'all_items'          => 'Mieszkania',
 	);
 
 	$args = array( 
@@ -21,14 +21,14 @@ function go_post_types_licytacje() {
 		'query_var'         => true,
 		'publicly_queryable' => true,
 		'show_in_rest' => true,
-		"rewrite"             => array( "slug" => "licytacje", "with_front" => true ),
+		"rewrite"             => array( "slug" => "mieszkania", "with_front" => true ),
 		'supports'      => array( 'title', 'page-attributes', 'thumbnail', ),
 		// , 'editor' 
 	);
-    register_post_type( 'licytacje', $args );
+    register_post_type( 'mieszkania', $args );
 
 }
-add_action( 'init', 'go_post_types_licytacje' );
+add_action( 'init', 'go_post_types_mieszkania' );
 
 // //////////////////////////////////////////////////////////////Projects
 // function go_post_types_projects() {

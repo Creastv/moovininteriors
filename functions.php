@@ -80,14 +80,15 @@ function ka_override_MCE_options($init)
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-
-
-// disable gut for pages
-// add_filter( 'use_block_editor_for_post', 'my_disable_gutenberg', 10, 2 );
-
-// function my_disable_gutenberg( $can_edit, $post ) {
-//   if ( !get_page_template_slug( $post->ID ) == 'page-home.php' && !get_page_template_slug( $post->ID ) == 'page-contact.php') {
-//     return true;
-//   }
-//   return false;
-// }
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(array(
+    'page_title' => 'Moovin settings',
+    'menu_title' => 'Moovin settings',
+    'parent_slug' => 'themes.php',
+  ));
+  acf_add_options_page(array(
+    'page_title' => 'Extras',
+    'menu_title' => 'Extras',
+    'parent_slug' => 'themes.php',
+  ));
+}

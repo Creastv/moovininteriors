@@ -22,26 +22,80 @@ body {
 }
 
 .container {
-  max-width: 1555px;
-  width: 100%;
+  max-width: 1330px;
+  width: 90%;
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 998px) {
+@media only screen and (max-width: 768px) {
   .container {
     width: 100%;
   }
 }
 
-.row {
+.container .row {
   padding-left: 50px;
   padding-right: 50px;
 }
 
 @media only screen and (max-width: 768px) {
-  .row {
+  .container .row {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .container .row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container-fluid {
+  max-width: 1673px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 998px) {
+  .container-fluid {
+    width: 100%;
+  }
+}
+
+.container-fluid .row {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container-fluid .row {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 998px) {
+  .container-fluid .row {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.container-fluid .entry-content {
+  padding-left: 160px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container-fluid .entry-content {
+    padding-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid .entry-content {
+    padding-left: 0px;
   }
 }
 
@@ -98,7 +152,7 @@ body {
 }
 
 #go-to-top svg path {
-  fill: #bc9c3b;
+  fill: #5f031f;
   -webkit-transition: all 0.2s liner;
   transition: all 0.2s liner;
 }
@@ -174,7 +228,7 @@ body {
 }
 
 .l-item .l-item__left img {
-  border: 1px solid #eaf2f7;
+  border: 1px solid #f4f4f4;
 }
 
 @media only screen and (max-width: 460px) {
@@ -202,12 +256,6 @@ body {
 .l-item .l-item__right .links a {
   margin-right: 10px;
   font-weight: 700;
-}
-
-.error404 .entry-title {
-  font-size: 100px !important;
-  margin: 20px 0;
-  text-align: center;
 }
 
 .error404 .btn {
@@ -248,7 +296,7 @@ body {
 .page-template-page-about .bg {
   width: 100%;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #061322;
   background-position: top right;
   background-size: cover;
   width: 100vw;
@@ -266,18 +314,18 @@ body {
 
 .page-template-page-about .bg-wraper {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(6, 19, 34, 0.5);
   min-height: 100vh;
 }
 
 @media only screen and (max-width: 768px) {
   .page-template-page-about .bg-wraper {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(6, 19, 34, 0.8);
   }
 }
 
 .page-template-page-about .h1 {
-  color: #bc9c3b;
+  color: #5f031f;
   padding: 50px 0;
 }
 
@@ -324,18 +372,14 @@ body {
 
 .page-template-page-contact .bg-wraper {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(6, 19, 34, 0.5);
   min-height: 100vh;
 }
 
 @media only screen and (max-width: 768px) {
   .page-template-page-contact .bg-wraper {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(6, 19, 34, 0.8);
   }
-}
-
-.page-template-page-contact .entry-title {
-  color: #bc9c3b;
 }
 
 .page-template-page-contact .row-col {
@@ -404,7 +448,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   .page-template-page-home .bg-wraper {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(6, 19, 34, 0.8);
   }
 }
 
@@ -420,7 +464,7 @@ body {
   font-size: 68px;
   font-size: 3.9vw;
   font-weight: 300;
-  color: #bc9c3b;
+  color: #5f031f;
 }
 
 @media only screen and (max-width: 768px) {
@@ -430,7 +474,7 @@ body {
 }
 
 .page-template-page-home .cont__wraper .title h1 i {
-  color: #bc9c3b;
+  color: #5f031f;
 }
 
 .page-template-page-home .cont__wraper .title p {
@@ -497,7 +541,7 @@ body {
   font-size: 68px;
   font-size: 3.2vw;
   font-weight: 700;
-  color: #bc9c3b;
+  color: #5f031f;
 }
 
 @media only screen and (max-width: 768px) {
@@ -515,7 +559,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-color: #bc9c3b;
+  border-color: #5f031f;
 }
 
 .page-template-page-home .cont__wraper .cta .cta__right .btn span {
@@ -523,7 +567,7 @@ body {
 }
 
 .page-template-page-home .cont__wraper .cta .cta__right .btn:hover {
-  background-color: #bc9c3b;
+  background-color: #5f031f;
 }
 
 .page-template-page-home .cont__wraper .cta .cta__right .btn:hover span {
