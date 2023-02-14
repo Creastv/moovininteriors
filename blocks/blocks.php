@@ -85,6 +85,23 @@ function register_acf_block_types() {
           wp_enqueue_style( 'go-numbers',  get_template_directory_uri() . '/blocks/numbers/numbers.min.css' );
       },
     ));
+    acf_register_block_type(array(
+        'name'              => 'compare',
+        'title'             => __('compare'),
+        'render_template'   => 'blocks/compare/compare.php',
+        'category'          => 'formatting',
+        'icon' => array(
+          'background' => '#bc9c3b',
+          'foreground' => '#fff',
+          'src' => 'ellipsis',
+        ),
+      'mode'            => 'preview', 
+      'keywords'          => array( 'compare' ),
+      'supports' => array( 'align' =>false ),
+      'enqueue_assets'    => function(){
+          wp_enqueue_style( 'go-compare',  get_template_directory_uri() . '/blocks/compare/compare.min.css' );
+      },
+    ));
 }
 if( function_exists('acf_register_block_type') ) {
     add_action('acf/init', 'register_acf_block_types');
