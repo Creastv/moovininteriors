@@ -1,5 +1,11 @@
 <?php
-$display = get_field('display_cta');
+if(is_home() && !is_front_page()){
+    $id= 14;
+} else{
+     $id = get_the_ID();
+};
+
+$display = get_field('display_cta', $id);
 
 $link = get_field('button_cta', 'options');
 $headline = get_field('headline_cta', 'options');
@@ -11,7 +17,7 @@ if( $link ){
     $link_target = $link['target'] ? $link['target'] : '_self';
 }
 ?>
-<?php if($display) : ?>
+<?php if($display || is_single()) : ?>
 
 <div class="b__cta b__cta--footer" style="background-image:url(<?php echo $bg; ?>);">
     <div class="container-fluid">

@@ -6,6 +6,9 @@
   width: 100%;
   top: 0px;
   margin-bottom: 50px;
+  @media #{$sm} {
+    margin-bottom: 50px;
+  }
 
   .navbar {
     transition: all 0.3s linear;
@@ -333,6 +336,9 @@
       margin: 0;
     }
   }
+  .desc {
+    max-width: 960px;
+  }
   .page-title__title {
     font-size: 71px;
     color: #fff;
@@ -343,6 +349,7 @@
       font-size: 38px;
     }
   }
+
   .page-title__left {
     margin-right: 50px;
     position: relative;
@@ -388,6 +395,20 @@
     color: #fff;
   }
 }
+.page-title--post {
+  justify-content: center;
+  .page-title__center {
+    text-align: center;
+    .page-title__title {
+      text-align: center;
+      font-size: 48px;
+      max-width: 800px;
+      @media #{$sm} {
+        font-size: 38px;
+      }
+    }
+  }
+}
 
 .scroll-down {
   position: absolute;
@@ -406,9 +427,39 @@
   .scroll-down__ani {
     position: absolute;
     top: 20px;
+    width: 12px;
+    height: 35px;
+    border: 1px solid $main;
+    border-radius: 100px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      width: 2px;
+      height: 13px;
+      background-color: $main;
+      transform: translate(0, 5px);
+
+      animation-name: mouse;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
   }
 }
+@keyframes mouse {
+  0% {
+    transform: translate(0, 5px);
+  }
 
+  50% {
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0, 5px);
+  }
+}
 .header-contact {
   display: flex;
   align-items: center;
@@ -454,5 +505,13 @@
       padding: 10px !important;
       font-size: 18px !important;
     }
+  }
+}
+
+.bg-none {
+  background: none !important;
+  .go__bg,
+  .go__bg__two {
+    background: none !important;
   }
 }

@@ -1,0 +1,45 @@
+.b-contact .b-contact__wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.b-contact .b-contact__wraper .b-contact__col p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.b-contact .b-contact__wraper .b-contact__col .b-contact-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.b-contact .b-contact__wraper .b-contact__col .b-contact-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.b-contact .b-contact__wraper .b-contact__col .b-contact-links a span {
+  font-size: 26px;
+}
+/*# sourceMappingURL=contact.css.map */

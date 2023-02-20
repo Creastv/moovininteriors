@@ -1,10 +1,9 @@
 </div>
 </div>
 </main>
-
-<?php get_template_part('templates-parts/footer/footer', 'form'); ?>
+<?php get_template_part('templates-parts/parts/posts'); ?>
+<?php get_template_part('templates-parts/parts/form'); ?>
 <?php get_template_part('templates-parts/footer/footer', 'get-know'); ?>
-<?php get_template_part('templates-parts/footer/footer', 'opinions'); ?>
 <?php get_template_part('templates-parts/footer/footer', 'cta'); ?>
 
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">

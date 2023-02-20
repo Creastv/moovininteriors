@@ -1,4 +1,5 @@
 <?php
+
 $contact = get_field('contact_footer', 'options');
 ?>
 

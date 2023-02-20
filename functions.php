@@ -1,6 +1,9 @@
 <?php
 add_theme_support('post-thumbnails');
-add_image_size( 'licytacja', 220, 220, array( 'center', 'center' ) );
+add_image_size( 'galery', 220, 220, array( 'center', 'center' ) );
+add_image_size( 'sm-icon', 28, 28, array( 'center', 'center' ) );
+add_image_size( 'l-post', 450, 338, array( 'center', 'center' ) );
+add_image_size( 'l-post-single', 900, 500, array( 'center', 'center' ) );
 
 if ( ! function_exists( 'go_register_nav_menu' ) ) {
     function go_register_nav_menu(){
@@ -11,12 +14,12 @@ if ( ! function_exists( 'go_register_nav_menu' ) ) {
     }
     add_action( 'after_setup_theme', 'go_register_nav_menu', 0 );
 }
-
+require get_template_directory() . '/blocks/blocks.php';
 require_once get_template_directory() . '/func/enqueue-styles.php';
 require_once get_template_directory() . '/func/enqueue-scripts.php';
 require get_template_directory() . '/func/clean-up.php';
 require get_template_directory() . '/func/cpt.php';
-require get_template_directory() . '/blocks/blocks.php';
+
 
 // gutenberg editor
 function add_block_editor_assets(){
@@ -57,12 +60,12 @@ function filter_plugin_updates( $value ) {
 function ka_override_MCE_options($init)
   {
     $custom_colors = '
-          "bc9c3b", "Main color",
-          "000000", "Black",
-          "989898", "Light black",
-          "c6ced3", "Gray",
+          "5f031f", "Main color",
+          "061322", "Black",
+          "252323", "Light black",
+          "f4f4f4", "Gray",
           "d7d7d7", "Gary dark",
-          "eaf2f7", "Light",
+          "c6ced3", "Light",
       ';
     // build color grid palette
     $init['textcolor_map'] = '[' . $custom_colors . ']';
@@ -77,7 +80,7 @@ function ka_override_MCE_options($init)
 
 // Excerpt changing 3 dots
   Function new_excerpt_more( $more ) {
-	return ' ... ';
+	return ' ';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

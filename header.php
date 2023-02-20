@@ -15,9 +15,28 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php $bg = get_field('header_background', 'options');
+    <?php
+    if(is_home() && !is_front_page()){
+        $id= 14;
+    } else{
+        $id = get_the_ID();
+    };
+    $bg = get_field('header_background', 'options');
+    $dTitle = get_field( 'display_title', $id);
+    $dImg = get_field( 'dib', $id);
+    $bgCustom = get_field( 'background_img', $id);
+    $bgColor = "";
+    if($dImg == 1){
+        $bg = $bg;
+    } elseif($dImg == 2){
+        $bg = $bgCustom;
+    } elseif($dImg == 3){
+        $bg = "";
+        $bgColor = "bg-none";
+    }
+
     ?>
-    <header id="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image:url(<?php echo $bg; ?>);">
+    <header id="header" class="<?php echo $bgColor; ?>" itemscope itemtype="http://schema.org/WPHeader" style="background-image:url(<?php echo $bg; ?>);">
         <div class="js-navbar">
             <div class="container-fluid">
                 <div class="row">
@@ -30,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <?php if($dTitle || is_single() || is_tag() || is_category()) { ?>
         <div>
             <div class="container-fluid">
                 <div class="row">
@@ -38,19 +58,12 @@
                         <svg class="scroll-down__bg" xmlns="http://www.w3.org/2000/svg" width="209.998" height="60.997" viewBox="0 0 209.998 60.997">
                             <path id="Shape_698" data-name="Shape 698" d="M1934.612,614.4a60.463,60.463,0,0,0-104.262-4.865,15.692,15.692,0,0,0-1.432,2.283A60.571,60.571,0,0,1,1776,643h210A60.517,60.517,0,0,1,1934.612,614.4Z" transform="translate(-1775.999 -581.999)" fill="#fff" />
                         </svg>
-                        <svg class="scroll-down__ani" xmlns="http://www.w3.org/2000/svg" width="10.61" height="35.84" viewBox="0 0 10.61 35.84">
-                            <g id="Group_46" data-name="Group 46" transform="translate(-1875.31 -595.72)">
-                                <line id="Shape_699" data-name="Shape 699" y2="13.72" transform="translate(1880.62 600.3)" fill="none" stroke="#5f021f" stroke-width="1" />
-                                <g id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" transform="translate(1875.31 595.72)" fill="none" stroke="#5f021f" stroke-width="1">
-                                    <rect width="10.61" height="35.84" rx="5.305" stroke="none" />
-                                    <rect x="0.5" y="0.5" width="9.61" height="34.84" rx="4.805" fill="none" />
-                                </g>
-                            </g>
-                        </svg>
+                        <span class="scroll-down__ani"></span>
                     </div>
                 </div>
             </div>
         </div>
+        <?php } ?>
         <span class="go__bg"></span>
         <span class="go__bg__two"></div>
     </header>

@@ -1,0 +1,33 @@
+.b-how-to-get .b-how-to-get__wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.b-how-to-get .b-how-to-get__wraper .b-how-to-get__col p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.b-how-to-get .b-how-to-get__wraper .b-how-to-get__col a {
+  color: #5f031f;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  display: block;
+}
+/*# sourceMappingURL=how-to-get.css.map */

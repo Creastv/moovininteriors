@@ -16,3 +16,14 @@
 // footer
 @import "scss/footer/footer-cta";
 @import "scss/footer/footer-get-know";
+
+.home #header {
+  position: absolute;
+}
+.b-hero {
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  padding: 150px 0;
+}

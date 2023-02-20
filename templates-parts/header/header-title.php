@@ -1,3 +1,13 @@
+<?php 
+if(is_home() && !is_front_page()){
+    $id= 14;
+} else{
+     $id = get_the_ID();
+};
+$desc = get_field( 'desc', $id );
+?>
+
+<?php if(!is_single()){ ?>
 <div class="page-title">
     <div class="page-title__left">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="105.8px" height="105.8px" viewBox="0 0 105.8 105.8" style="enable-background:new 0 0 105.8 105.8;" xml:space="preserve">
@@ -18,13 +28,20 @@
         <span></span>
     </div>
     <div class="page-title__right">
-        <h1 class="page-title__title">
-            <?php if ( is_category() ) :
+        <?php } else { ?>
+        <div class="page-title  page-title--post ">
+            <div class="page-title__center">
+                <?php } ?>
+
+                <h1 class="page-title__title">
+                    <?php if ( is_category() ) :
 					single_cat_title();					
 					elseif (is_404()) :
 						_e( '404', 'go');
 					elseif (is_page() ) :
 						the_title();
+					elseif (is_single() ) :
+					    the_title();
 					elseif ( is_tag() ) :
 						single_tag_title();
 					elseif ( is_author() ) :
@@ -48,9 +65,16 @@
 					elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 						_e( 'Links', 'go' );
 					else :
-						_e( 'Block', 'go' );
+						_e( 'Blog', 'go' );
 				endif; ?>
-        </h1>
-        <!-- <p>ldhfkasklbn</p> -->
-    </div>
-</div>
+                </h1>
+                <?php if(is_single() && function_exists('rank_math_the_breadcrumbs')) { ?>
+                <?php rank_math_the_breadcrumbs(); ?>
+                <?php } ?>
+                <?php if($desc) { ?>
+                <div class="desc">
+                    <p><?php echo $desc; ?></p>
+                </div>
+                <?php } ?>
+            </div>
+        </div>

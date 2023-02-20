@@ -16,20 +16,22 @@ body {
   // padding-top: 188px;
 }
 #main {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 }
-
+#header {
+  position: absolute;
+}
 .container {
   max-width: 1330px;
   width: 90%;
   margin: 0 auto;
-  @media #{$sm} {
+  @media #{$lg} {
     width: 100%;
   }
   .row {
-    padding-left: 50px;
-    padding-right: 50px;
-    @media #{$sm} {
+    padding-left: 15px;
+    padding-right: 15px;
+    @media #{$md} {
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -117,6 +119,18 @@ body {
   }
 }
 
+.d-sm-none {
+  @media #{$md} {
+    display: none !important;
+  }
+}
+.d-lg-block {
+  display: none !important;
+  @media #{$md} {
+    display: block !important;
+  }
+}
+
 .scroll-anchor {
   display: block;
   /* width: 100%; */
@@ -127,6 +141,7 @@ body {
 }
 
 .go-pagination {
+  padding: 30px 0 150px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -134,6 +149,18 @@ body {
   flex-wrap: wrap;
   width: 100%;
   gap: 10px;
+  @media #{$sm} {
+    padding: 0px 0 50px 0;
+  }
+  a {
+    color: $black;
+  }
+  .current {
+    background-color: $black;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 5px;
+  }
 }
 
 .go__bg {

@@ -17,8 +17,8 @@ body {
   overflow-x: hidden;
 }
 
-#main {
-  margin-bottom: 50px;
+#header {
+  position: absolute;
 }
 
 .container {
@@ -27,18 +27,18 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1300px) {
   .container {
     width: 100%;
   }
 }
 
 .container .row {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 998px) {
   .container .row {
     padding-left: 30px;
     padding-right: 30px;
@@ -145,6 +145,22 @@ body {
   opacity: 0.5;
 }
 
+@media only screen and (max-width: 998px) {
+  .d-sm-none {
+    display: none !important;
+  }
+}
+
+.d-lg-block {
+  display: none !important;
+}
+
+@media only screen and (max-width: 998px) {
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
 .scroll-anchor {
   display: block;
   /* width: 100%; */
@@ -155,6 +171,7 @@ body {
 }
 
 .go-pagination {
+  padding: 30px 0 150px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,6 +186,23 @@ body {
       flex-wrap: wrap;
   width: 100%;
   gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .go-pagination {
+    padding: 0px 0 50px 0;
+  }
+}
+
+.go-pagination a {
+  color: #061322;
+}
+
+.go-pagination .current {
+  background-color: #061322;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 5px;
 }
 
 .go__bg {

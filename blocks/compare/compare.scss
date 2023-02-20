@@ -2,6 +2,12 @@
 .b-compare {
   .b-compare__wraper {
   }
+  .b-compare__col {
+    width: 85%;
+    @media #{$lg} {
+      width: 100%;
+    }
+  }
   .packs {
     padding: 75px 0;
     display: flex;
@@ -48,6 +54,7 @@
     }
     .top {
       position: relative;
+      width: 35%;
       @media #{$md} {
         width: 100%;
         order: 1;

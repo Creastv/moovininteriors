@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,eAAe,CAAC;EACd,gBAAgB,ECQV,OAAO;EDPb,OAAO,EAAE,MAAM;EACf,aAAa,EAAE,IAAI;CASpB;;AAZD,AAIE,eAJa,CAIb,YAAY,CAAC;EACX,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,IAAI;CAKjB;;AAXH,AAOI,eAPW,CAIb,YAAY,CAGV,EAAE;AAPN,eAAe,CAIb,YAAY,CAIV,CAAC,CAAC;EACA,OAAO,EAAE,eAAe;CACzB",
+    "sources": [
+        "form-contact.scss",
+        "../../src/css/scss/_variable.scss"
+    ],
+    "names": [],
+    "file": "form-contact.css"
+}

@@ -24,7 +24,24 @@ function go_post_types_mieszkania() {
 		"rewrite"             => array( "slug" => "mieszkania", "with_front" => true ),
 		'supports'      => array( 'title', 'page-attributes', 'thumbnail', ),
 		// , 'editor' 
+		 'taxonomies' => array('category'),
+            'public' => true,
+            'publicly_queryable' => true,
+            'show_ui' => true, 
+            'query_var' => true,
+'category_description' => true,
+            'rewrite' => true,
+            'capability_type' => 'post',
+            'hierarchical' => true,
+            'menu_position' => 5,
+            'show_in_rest' => true,
+            'supports' => array(
+                'title','editor','author','thumbnail','excerpt','comments', 'post-formats'
+            ),
+            'has_archive' => true
 	);
+
+	
     register_post_type( 'mieszkania', $args );
 
 }

@@ -31,8 +31,8 @@ h6,
   }
 }
 .section-h {
-  font-size: 38px;
-  line-height: 44px;
+  font-size: 34px;
+  line-height: 40px;
   @media #{$lg} {
     font-size: 26px;
     line-height: 32px;
@@ -42,14 +42,20 @@ h6,
     line-height: 30px;
   }
 }
+.subhead-h {
+  font-size: 28px;
+  line-height: 34px;
+}
 li {
   margin-bottom: 20px;
 }
 p,
 li {
   line-height: 26px;
-  padding-bottom: 20px;
   margin: 0;
+}
+p {
+  margin-bottom: 20px;
 }
 ul,
 ol {
@@ -57,7 +63,7 @@ ol {
 }
 
 a {
-  // color: $main;
+  color: $main;
   text-decoration: none;
   transition: all 0.1s linear;
   font-weight: 500;
@@ -69,7 +75,7 @@ a {
   p,
   li,
   a {
-    font-size: 14px;
+    // font-size: 14px;
   }
 }
 

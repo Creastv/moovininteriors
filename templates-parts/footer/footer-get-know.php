@@ -1,5 +1,10 @@
 <?php
-$display = get_field('display_getknow');
+if(is_home() && !is_front_page()){
+    $id= 14;
+} else{
+     $id = get_the_ID();
+};
+$display = get_field('display_getknow', $id);
 
 $img = get_field('img_get_know', 'options');
 $imgPosition = get_field('img_position', 'options');

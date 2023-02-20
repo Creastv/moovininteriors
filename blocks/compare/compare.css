@@ -1,3 +1,13 @@
+.b-compare .b-compare__col {
+  width: 85%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .b-compare .b-compare__col {
+    width: 100%;
+  }
+}
+
 .b-compare .packs {
   padding: 75px 0;
   display: -webkit-box;
@@ -71,6 +81,7 @@
 
 .b-compare .packs .top {
   position: relative;
+  width: 35%;
 }
 
 @media only screen and (max-width: 998px) {

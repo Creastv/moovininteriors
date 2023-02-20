@@ -1,12 +1,9 @@
 <?php
 get_header();
 if ( have_posts() ) : ?>
-<?php get_template_part( 'templates-parts/header/header', 'title' ); ?>
 <div class="posts-wraper">
     <?php while ( have_posts() ) : the_post(); 
-
     get_template_part( 'templates-parts/content/content', 'index' ); 
-    
     endwhile; ?>
     <?php if(paginate_links()) { ?>
     <div class="go-pagination">
