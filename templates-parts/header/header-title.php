@@ -5,9 +5,10 @@ if(is_home() && !is_front_page()){
      $id = get_the_ID();
 };
 $desc = get_field( 'desc', $id );
+$term = get_queried_object(); 
 ?>
 
-<?php if(!is_single()){ ?>
+<?php if(!is_single() || !is_post_type('mieszkania')){ ?>
 <div class="page-title">
     <div class="page-title__left">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="105.8px" height="105.8px" viewBox="0 0 105.8 105.8" style="enable-background:new 0 0 105.8 105.8;" xml:space="preserve">
@@ -32,12 +33,17 @@ $desc = get_field( 'desc', $id );
         <div class="page-title  page-title--post ">
             <div class="page-title__center">
                 <?php } ?>
-
-                <h1 class="page-title__title">
-                    <?php if ( is_category() ) :
+                <?php if($term->taxonomy == "Style") { ?>
+                <h2 class="page-title__title">
+                    <?php } else { ?>
+                    <h1 class="page-title__title">
+                        <?php } ?>
+                        <?php if ( is_category() ) :
 					single_cat_title();					
 					elseif (is_404()) :
 						_e( '404', 'go');
+					elseif (is_post_type('mieszkania') ) :
+						_e( 'Realizacje', 'go');
 					elseif (is_page() ) :
 						the_title();
 					elseif (is_single() ) :
@@ -67,7 +73,11 @@ $desc = get_field( 'desc', $id );
 					else :
 						_e( 'Blog', 'go' );
 				endif; ?>
+                        <?php if($term->taxonomy == "Style") { ?>
+                </h2>
+                <?php } else { ?>
                 </h1>
+                <?php } ?>
                 <?php if(is_single() && function_exists('rank_math_the_breadcrumbs')) { ?>
                 <?php rank_math_the_breadcrumbs(); ?>
                 <?php } ?>
@@ -76,6 +86,6 @@ $desc = get_field( 'desc', $id );
                     <p><?php echo $desc; ?></p>
                 </div>
                 <?php } ?>
-                <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+                <?php the_archive_description( '<div class="desc">', '</div>' ); ?>
             </div>
         </div>

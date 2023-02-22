@@ -47,6 +47,38 @@ function go_post_types_mieszkania() {
 }
 add_action( 'init', 'go_post_types_mieszkania' );
 
+
+
+  
+add_action( 'init', 'go_taxonomy_style', 0 );
+  
+function go_taxonomy_style() {
+  $labels = array(
+    'name' => _x( 'Style', 'go' ),
+    'singular_name' => _x( 'Styl', 'go' ),
+    'search_items' =>  __( 'Search Style' ),
+    'all_items' => __( 'All Style' ),
+    'parent_item' => __( 'Parent Subject' ),
+    'parent_item_colon' => __( 'Parent Subject:' ),
+    'edit_item' => __( 'Edit Subject' ), 
+    'update_item' => __( 'Update Subject' ),
+    'add_new_item' => __( 'Add New Subject' ),
+    'new_item_name' => __( 'New Subject Name' ),
+    'menu_name' => __( 'Style' ),
+  );    
+  
+  register_taxonomy('Style',array('mieszkania'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'style' ),
+  ));
+  
+}
+
 function remove_my_post_type($post_link, $post, $leavename) {
     if ($post->post_type != 'mieszkania' || $post->post_status != 'publish') {
         return $post_link;

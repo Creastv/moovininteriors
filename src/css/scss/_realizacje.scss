@@ -67,3 +67,48 @@
     padding: 20px;
   }
 }
+
+.terms-style {
+  padding: 50px 0;
+  @media #{$sm} {
+    padding: 30px 0;
+  }
+  > p {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .terms-style__nav {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px 0;
+    @media #{$sm} {
+      margin: 30px 0;
+    }
+    li {
+      text-align: center;
+      width: calc(25% - 10px);
+      @media #{$sm} {
+        width: initial;
+      }
+      a {
+        display: block;
+        background-color: $light;
+        border: 1px solid $main;
+        padding: 10px;
+      }
+    }
+    .active {
+      a {
+        background-color: $main;
+        color: #fff;
+      }
+    }
+  }
+  .terms-style__con {
+  }
+}

@@ -1,6 +1,8 @@
 #header {
   background-color: $black;
-  background-position: center;
+  background-position: center bottom;
+  // background-attachment: fixed;
+  background-size: cover;
   position: relative;
   z-index: 99;
   width: 100%;
