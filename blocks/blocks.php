@@ -286,7 +286,7 @@ function register_acf_block_types() {
           'jsx' 			=> true,
         ],
         'enqueue_assets'    => function(){
-            wp_enqueue_style( 'go-container',  get_template_directory_uri() . '/blocks/container/container.min.css' );
+            wp_enqueue_style( 'go-container',  get_template_directory_uri() . '/blocks/container/container.min.css', '20130456', true  );
       },
     ));
 }

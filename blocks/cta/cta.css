@@ -5,14 +5,12 @@
   background-attachment: fixed;
   position: relative;
 }
-
 @media only screen and (max-width: 768px) {
   .b__cta {
     background-attachment: initial;
     background-size: cover;
   }
 }
-
 @media only screen and (max-width: 768px) {
   .b__cta {
     padding: 30px 0;
@@ -20,32 +18,21 @@
     background-size: cover;
   }
 }
-
 .b__cta .b__cta__wraper {
   position: relative;
   z-index: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 @media only screen and (max-width: 768px) {
   .b__cta .b__cta__wraper {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
-
 .b__cta .b__cta__wraper .b__cta__left {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  flex: auto;
 }
-
 .b__cta .b__cta__wraper .b__cta__left p {
   font-size: 28px;
   line-height: 38px;
@@ -54,13 +41,11 @@
   font-weight: 500;
   color: #fff;
 }
-
 @media only screen and (max-width: 1300px) {
   .b__cta .b__cta__wraper .b__cta__left p br {
     display: none;
   }
 }
-
 @media only screen and (max-width: 768px) {
   .b__cta .b__cta__wraper .b__cta__left p {
     margin-bottom: 30px;
@@ -71,7 +56,6 @@
     display: none;
   }
 }
-
 .b__cta .b__cta__wraper .b__cta__right .btn {
   min-width: 300px;
 }
@@ -81,5 +65,4 @@
   margin-left: -50vw !important;
   left: 50% !important;
   position: relative !important;
-}
-/*# sourceMappingURL=cta.css.map */
+}/*# sourceMappingURL=cta.css.map */

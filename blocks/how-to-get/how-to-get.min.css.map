@@ -1,11 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAEA,AACE,aADW,CACX,qBAAqB,AAAC,CACpB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,aAAa,CAC9B,SAAS,CAAE,IAAI,CAiBhB,AAtBH,AAQM,aARO,CACX,qBAAqB,CAMnB,kBAAkB,CAChB,CAAC,AAAC,CACA,OAAO,CAAE,IAAI,CACb,GAAG,CAAE,IAAI,CACT,WAAW,CAAE,MAAM,CACnB,aAAa,CAAE,IAAI,CACnB,OAAO,CAAE,CAAC,CACX,AAdP,AAeM,aAfO,CACX,qBAAqB,CAMnB,kBAAkB,CAQhB,CAAC,AAAC,CACA,KAAK,CCXN,OAAO,CDYN,eAAe,CAAE,SAAS,CAC1B,aAAa,CAAE,IAAI,CACnB,OAAO,CAAE,KAAK,CACf",
-    "sources": [
-        "how-to-get.scss",
-        "../../src/css/scss/_variable.scss",
-        "../../src/css/scss/_variable.scss"
-    ],
-    "names": [],
-    "file": "how-to-get.min.css"
-}
+{"version":3,"sources":["how-to-get.scss","../../src/css/scss/_variable.scss"],"names":[],"mappings":"AAGE,oCACE,YAAA,CACA,kBAAA,CACA,6BAAA,CACA,cAAA,CAGE,yDACE,YAAA,CACA,QAAA,CACA,kBAAA,CACA,kBAAA,CACA,SAAA,CAEF,yDACE,aCXD,CDYC,yBAAA,CACA,kBAAA,CACA,aAAA","file":"how-to-get.min.css"}

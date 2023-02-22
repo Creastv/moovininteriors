@@ -29,7 +29,7 @@ function go_post_types_mieszkania() {
             'publicly_queryable' => true,
             'show_ui' => true, 
             'query_var' => true,
-'category_description' => true,
+            'category_description' => true,
             'rewrite' => true,
             'capability_type' => 'post',
             'hierarchical' => true,
@@ -46,6 +46,31 @@ function go_post_types_mieszkania() {
 
 }
 add_action( 'init', 'go_post_types_mieszkania' );
+
+function remove_my_post_type($post_link, $post, $leavename) {
+    if ($post->post_type != 'mieszkania' || $post->post_status != 'publish') {
+        return $post_link;
+    }
+    $post_link = str_replace('/' . $post->post_type . '/', '/', $post_link);
+    return $post_link;
+}
+add_filter('post_type_link', 'remove_my_post_type', 10, 3);
+
+function set_my_post($query) {
+    if(isset($query->query['post_type'])){
+        return;
+    }
+    if (!empty($query->query['name'])) {
+        $query->set('post_type', array('post', 'mieszkania', 'page'));
+	}
+	if( (is_category() || is_tag()) && $query->is_archive() && empty( 
+        $query->query_vars['suppress_filters'] ) ) {
+        $query->set( 'post_type', array(
+           'post', 'mieszkania'
+        ));
+    }
+}
+add_action('pre_get_posts', 'set_my_post');
 
 // //////////////////////////////////////////////////////////////Projects
 // function go_post_types_projects() {
