@@ -1305,9 +1305,13 @@ footer * {
   padding: 0px;
   margin: 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin: 50px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 768px) {
   .terms-style .terms-style__nav {
