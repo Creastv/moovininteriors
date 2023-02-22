@@ -167,7 +167,7 @@ body.active {
     order: 3;
   }
   @media #{$lg} {
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: -100%;
     display: block !important;
