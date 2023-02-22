@@ -115,6 +115,7 @@ body {
   padding: 0;
   background-color: #fff;
   overflow-x: hidden;
+  transition: all 0.3s linear;
 }
 
 #header {
@@ -123,12 +124,12 @@ body {
 
 .container {
   max-width: 1330px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 @media only screen and (max-width: 1300px) {
   .container {
-    width: 100%;
+    width: 95%;
   }
 }
 .container .row {
@@ -545,7 +546,6 @@ footer * {
   }
 }
 #header .navbar {
-  transition: all 0.3s linear;
   position: relative;
   z-index: 99;
   display: flex;
@@ -619,17 +619,21 @@ footer * {
   transition: all 0.3s linear;
   fill: #000;
 }
+.js-navbar.active li a {
+  color: #061322 !important;
+}
 .js-navbar.active .navbar__toggler span {
   color: #061322;
 }
 .js-navbar.active .navbar__toggler .navbar__toggler__btn span {
   background-color: #061322;
 }
-.js-navbar.active .header-nav-list * {
-  color: #061322;
-}
 .js-navbar.active .header-contact__phone {
   color: #061322;
+}
+
+body.active {
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -693,12 +697,8 @@ footer * {
     order: 3;
   }
 }
-.navbar__navigation > ul {
-  position: relative;
-  padding: 20px 0 20px 20px;
-}
 @media only screen and (max-width: 1300px) {
-  .navbar__navigation > ul {
+  .navbar__navigation {
     position: absolute;
     top: 0px;
     right: -100%;
@@ -710,6 +710,10 @@ footer * {
     background: #061322;
     text-align: right;
   }
+}
+.navbar__navigation > ul {
+  position: relative;
+  padding: 20px 0 20px 20px;
 }
 @media only screen and (max-width: 1300px) {
   .navbar__navigation > ul li {
@@ -747,25 +751,32 @@ footer * {
   color: #5f031f !important;
 }
 
-.navbar__navigation.active > ul {
+.navbar__navigation.active {
   transition: all 0.5s linear;
-  right: -50px !important;
+  right: -30px !important;
   padding-right: 30px;
   border: none;
 }
-@media only screen and (max-width: 768px) {
-  .navbar__navigation.active > ul {
-    right: -30px !important;
-  }
+.navbar__navigation.active > ul {
+  flex-wrap: wrap;
 }
 .navbar__navigation.active > ul li {
   transition: all 0.5s linear;
+  display: block;
+  width: 100%;
 }
 .navbar__navigation.active > ul li a {
   padding: 0 !important;
+  color: #fff !important;
 }
 .navbar__navigation.active .sub-menu {
   box-shadow: none;
+}
+.navbar__navigation.active .navbar__toggler span {
+  color: #fff;
+}
+.navbar__navigation.active .navbar__toggler .navbar__toggler__btn span {
+  background-color: #fff;
 }
 
 .navbar__toggler {
@@ -820,6 +831,13 @@ footer * {
   transform: translateY(0) rotate(-45deg);
   width: 100%;
   transform-origin: 30% 0;
+}
+
+.navbar__navigation.active + .header-contact + .navbar__toggler span {
+  color: #fff;
+}
+.navbar__navigation.active + .header-contact + .navbar__toggler .navbar__toggler__btn span {
+  background-color: #fff;
 }
 
 .page-title {

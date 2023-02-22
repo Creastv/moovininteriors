@@ -13,7 +13,7 @@
   }
 
   .navbar {
-    transition: all 0.3s linear;
+    // transition: all 0.3s linear;
     position: relative;
     z-index: 99;
     display: flex;
@@ -82,6 +82,11 @@
       }
     }
   }
+  li {
+    a {
+      color: $black !important;
+    }
+  }
   .navbar__toggler {
     span {
       color: $black;
@@ -93,29 +98,18 @@
     }
   }
   .header-nav-list {
-    * {
-      color: $black;
-    }
+    // * {
+    //   color: $black;
+    // }
   }
 
   .header-contact__phone {
     color: $black;
   }
 }
-
-// .js-header.active {
-//   transition: all 0.3s linear;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   background-color: rgba(#171718, 0.8) !important;
-//   .navbar {
-//     padding: 0px !important;
-//     @media #{$sm} {
-//       padding: 0px 0 !important;
-//     }
-//   }
-// }
+body.active {
+  overflow: hidden;
+}
 
 // Logo
 .navbar__brand {
@@ -172,21 +166,21 @@
     flex: none;
     order: 3;
   }
+  @media #{$lg} {
+    position: absolute;
+    top: 0px;
+    right: -100%;
+    display: block !important;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    padding-top: 150px;
+    background: $black;
+    text-align: right;
+  }
   > ul {
     position: relative;
     padding: 20px 0 20px 20px;
-    @media #{$lg} {
-      position: absolute;
-      top: 0px;
-      right: -100%;
-      display: block !important;
-      width: 100%;
-      max-width: 300px;
-      height: 100vh;
-      padding-top: 150px;
-      background: $black;
-      text-align: right;
-    }
     li {
       @media #{$lg} {
         transform: translate(100%, 0);
@@ -194,6 +188,7 @@
       a {
         padding: 15px 10px;
         font-weight: normal;
+
         &:hover {
           color: $main !important;
         }
@@ -228,24 +223,34 @@
 }
 
 .navbar__navigation.active {
+  transition: all 0.5s linear;
+  right: -30px !important;
+  padding-right: 30px;
+  border: none;
   > ul {
-    transition: all 0.5s linear;
-    // right: -8% !important;
-    right: -50px !important;
-    padding-right: 30px;
-    border: none;
-    @media #{$sm} {
-      right: -30px !important;
-    }
+    flex-wrap: wrap;
     li {
       transition: all 0.5s linear;
+      display: block;
+      width: 100%;
       a {
         padding: 0 !important;
+        color: #fff !important;
       }
     }
   }
   .sub-menu {
     box-shadow: none;
+  }
+  .navbar__toggler {
+    span {
+      color: #fff;
+    }
+    .navbar__toggler__btn {
+      span {
+        background-color: #fff;
+      }
+    }
   }
 }
 
@@ -315,6 +320,18 @@
     }
   }
 }
+
+.navbar__navigation.active + .header-contact + .navbar__toggler {
+  span {
+    color: #fff;
+  }
+  .navbar__toggler__btn {
+    span {
+      background-color: #fff;
+    }
+  }
+}
+
 // Page title
 
 .page-title {
