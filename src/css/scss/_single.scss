@@ -2,58 +2,58 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  .l-post {
-    width: calc(33.333% - 20px);
-    transition: 0.2s all;
-    margin-bottom: 15px;
-    @media #{$md} {
-      width: calc(50% - 20px);
-    }
-    @media #{$sm} {
-      width: 100%;
-    }
-    &:hover {
-      box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
-      h2 {
-        color: $main;
-      }
-      img {
-        transform: scale(1.1);
-        transition: 0.2s all;
-      }
-      svg {
-        transition: 0.5s all;
-        transform: translate(10px, 0);
-      }
-    }
-    > a {
-      overflow: hidden;
-      display: block;
+}
+.l-post {
+  width: calc(33.333% - 20px);
+  transition: 0.2s all;
+  margin-bottom: 15px;
+  @media #{$md} {
+    width: calc(50% - 20px);
+  }
+  @media #{$sm} {
+    width: 100%;
+  }
+  &:hover {
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    h2 {
+      color: $main;
     }
     img {
-      width: 100%;
-      height: auto;
+      transform: scale(1.1);
       transition: 0.2s all;
     }
-    h2 {
-      margin: 0px;
-      font-size: 18px;
-      line-height: 24px;
+    svg {
+      transition: 0.5s all;
+      transform: translate(10px, 0);
     }
   }
-  .l-post__title {
-    padding: 20px;
+  > a {
+    overflow: hidden;
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    transition: 0.2s all;
+  }
+  h2 {
+    margin: 0px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.l-post__title {
+  padding: 20px;
 
-    a {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      svg {
-        min-width: 50px;
-        height: 20px;
-        transition: 0.2s all;
-        transform: translate(-5px, 0);
-      }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    svg {
+      min-width: 50px;
+      height: 20px;
+      transition: 0.2s all;
+      transform: translate(-5px, 0);
     }
   }
 }

@@ -76,5 +76,6 @@ $desc = get_field( 'desc', $id );
                     <p><?php echo $desc; ?></p>
                 </div>
                 <?php } ?>
+                <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
             </div>
         </div>

@@ -3,7 +3,11 @@ get_header();
 if ( have_posts() ) : ?>
 <div class="posts-wraper">
     <?php while ( have_posts() ) : the_post(); 
-    get_template_part( 'templates-parts/content/content', 'index' ); 
+    if(is_post_type('mieszkania')){
+        get_template_part( 'templates-parts/content/content', 'flats' ); 
+    } else {
+        get_template_part( 'templates-parts/content/content', 'posts' ); 
+    }
     endwhile; ?>
     <?php if(paginate_links()) { ?>
     <div class="go-pagination">

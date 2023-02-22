@@ -183,58 +183,60 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
-.posts-wraper .l-post {
+
+.l-post {
   width: calc(33.333% - 20px);
   transition: 0.2s all;
   margin-bottom: 15px;
 }
 @media only screen and (max-width: 998px) {
-  .posts-wraper .l-post {
+  .l-post {
     width: calc(50% - 20px);
   }
 }
 @media only screen and (max-width: 768px) {
-  .posts-wraper .l-post {
+  .l-post {
     width: 100%;
   }
 }
-.posts-wraper .l-post:hover {
+.l-post:hover {
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
 }
-.posts-wraper .l-post:hover h2 {
+.l-post:hover h2 {
   color: #5f031f;
 }
-.posts-wraper .l-post:hover img {
+.l-post:hover img {
   transform: scale(1.1);
   transition: 0.2s all;
 }
-.posts-wraper .l-post:hover svg {
+.l-post:hover svg {
   transition: 0.5s all;
   transform: translate(10px, 0);
 }
-.posts-wraper .l-post > a {
+.l-post > a {
   overflow: hidden;
   display: block;
 }
-.posts-wraper .l-post img {
+.l-post img {
   width: 100%;
   height: auto;
   transition: 0.2s all;
 }
-.posts-wraper .l-post h2 {
+.l-post h2 {
   margin: 0px;
   font-size: 18px;
   line-height: 24px;
 }
-.posts-wraper .l-post__title {
+
+.l-post__title {
   padding: 20px;
 }
-.posts-wraper .l-post__title a {
+.l-post__title a {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.posts-wraper .l-post__title a svg {
+.l-post__title a svg {
   min-width: 50px;
   height: 20px;
   transition: 0.2s all;

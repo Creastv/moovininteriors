@@ -23,7 +23,7 @@ $category_name = $category_object[0]->name;
             <div class="posts-wraper">
                 <?php
             while ( $posts->have_posts() ) : $posts->the_post(); 
-                get_template_part( 'templates-parts/content/content', 'index' ); 
+                get_template_part( 'templates-parts/content/content', 'posts' ); 
             endwhile; wp_reset_query();
             ?>
             </div>
