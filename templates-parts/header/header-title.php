@@ -8,7 +8,7 @@ $desc = get_field( 'desc', $id );
 $term = get_queried_object(); 
 ?>
 
-<?php if(!is_single() || !is_post_type('mieszkania')){ ?>
+<?php if(!is_single()){ ?>
 <div class="page-title">
     <div class="page-title__left">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="105.8px" height="105.8px" viewBox="0 0 105.8 105.8" style="enable-background:new 0 0 105.8 105.8;" xml:space="preserve">
@@ -86,6 +86,8 @@ $term = get_queried_object();
                     <p><?php echo $desc; ?></p>
                 </div>
                 <?php } ?>
+                <?php if($term->taxonomy !== 'Style') { ?>
                 <?php the_archive_description( '<div class="desc">', '</div>' ); ?>
+                <?php } ?>
             </div>
         </div>

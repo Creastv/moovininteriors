@@ -28,9 +28,9 @@
     $bgColor = "";
     if($dImg == 1){
         $bg = $bg;
-    } elseif($dImg == 2){
+    } elseif($dImg == 2 ){
         $bg = $bgCustom;
-    } elseif($dImg == 3){
+    } elseif($dImg == 3 ||  is_singular('mieszkania') ){
         $bg = "";
         $bgColor = "bg-none";
     }
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <?php if($dTitle || is_single() || is_tag() || is_category() || is_post_type('mieszkania')) { ?>
+        <?php if($dTitle   || is_singular('post')  || is_tag() || is_category() || is_tax()) { ?>
         <div>
             <div class="container-fluid">
                 <div class="row">
