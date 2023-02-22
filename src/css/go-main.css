@@ -534,7 +534,6 @@ footer * {
   background-color: #061322;
   background-position: center bottom;
   background-size: cover;
-  position: fixed;
   z-index: 99;
   width: 100%;
   top: 0px;
