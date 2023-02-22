@@ -752,7 +752,7 @@ body.active {
 
 .navbar__navigation.active {
   transition: all 0.5s linear;
-  right: -30px !important;
+  right: 0px !important;
   padding-right: 30px;
   border: none;
 }
