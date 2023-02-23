@@ -71,7 +71,9 @@ $galeria = get_field( 'zdjecia_nowe', get_the_id() );
         <div class="go__bg__two"></div>
     </div>
     <?php if(wp_is_mobile()) { ?>
-    <?php echo the_post_thumbnail(); ?>
+    <div class="img">
+        <?php echo the_post_thumbnail('medium'); ?>
+    </div>
     <?php } ?>
     <?php the_content(); ?>
 
