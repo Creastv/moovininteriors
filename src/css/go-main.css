@@ -1351,6 +1351,19 @@ body.active {
   background-color: #5f031f;
   color: #fff;
 }
+.realization-gallery .wr {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.realization-gallery .wr a {
+  display: block;
+}
+.realization-gallery .wr img {
+  width: 100%;
+  height: auto;
+}
+
 .btn {
   color: #fff !important;
   padding: 20px 30px;

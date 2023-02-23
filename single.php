@@ -6,6 +6,5 @@ while ( have_posts() ) : the_post();
     } else {
         get_template_part( 'templates-parts/content/content', 'single-post' );
     }
-	
 endwhile;
 get_footer();

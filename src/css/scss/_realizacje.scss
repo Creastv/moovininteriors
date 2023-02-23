@@ -115,3 +115,17 @@
   .terms-style__con {
   }
 }
+.realization-gallery {
+  .wr {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    a {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
