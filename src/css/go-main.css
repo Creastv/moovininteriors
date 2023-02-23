@@ -713,7 +713,7 @@ body.active {
 }
 @media only screen and (max-width: 1300px) {
   .navbar__navigation > ul li {
-    transform: translate(100%, 0);
+    transform: translate(130%, 0);
   }
 }
 .navbar__navigation > ul li a {
