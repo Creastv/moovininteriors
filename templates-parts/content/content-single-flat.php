@@ -5,7 +5,6 @@ $galeria = get_field( 'zdjecia_nowe', get_the_id() );
     <div class="header-slider">
         <div class="swiper slider">
             <div class="swiper-wrapper">
-
                 <?php if($galeria){ ?>
                 <?php  $i = 0; foreach($galeria as $dodaj_zdjecie) {  ?>
                 <?php $i++; ?>
@@ -52,7 +51,9 @@ $galeria = get_field( 'zdjecia_nowe', get_the_id() );
                         </div>
                         <div class="page-title__right">
                             <h1 class="page-title__title"><?php the_title(); ?></h1>
-                            <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur ducimus provident at sed adipisci facilis quaerat doloribus in, accusantium quo aliquid illum nesciunt tenetur est recusandae ipsa quae dolorem pariatur.</p>
+                            <?php if ( get_field( 'desc' ) ) { ?>
+                            <p class="desc"><?php echo get_field( 'desc' ); ?></p>
+                            <?php } ?>
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
@@ -69,7 +70,9 @@ $galeria = get_field( 'zdjecia_nowe', get_the_id() );
         <div class="go__bg"></div>
         <div class="go__bg__two"></div>
     </div>
-
+    <?php if(wp_is_mobile()) { ?>
+    <?php echo the_post_thumbnail(); ?>
+    <?php } ?>
     <?php the_content(); ?>
 
     <?php if($galeria){ ?>
