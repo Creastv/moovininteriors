@@ -373,6 +373,7 @@ body {
   transform: translate(10px, 0);
 }
 .btn svg {
+  width: 30px;
   margin-right: 25px;
   transition: all 0.2s linear;
 }
@@ -1096,6 +1097,9 @@ body {
     gap: 0;
   }
 }
+.b__gtk .b__gtk__wraper .b__gtk__col {
+  margin-bottom: 20px;
+}
 @media only screen and (max-width: 998px) {
   .b__gtk .b__gtk__wraper .b__gtk__col {
     width: 100%;
@@ -1141,6 +1145,15 @@ body {
 }
 .b__gtk .b__gtk__wraper .b__gtk__col.left {
   order: 1;
+}
+.b__gtk .b__gtk__wraper .btn {
+  display: flex;
+  max-width: 300px;
+}
+@media only screen and (max-width: 460px) {
+  .b__gtk .b__gtk__wraper .btn {
+    max-width: 100%;
+  }
 }
 
 .wp-block-spacer {

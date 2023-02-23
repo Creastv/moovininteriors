@@ -13,6 +13,7 @@
       gap: 0;
     }
     .b__gtk__col {
+      margin-bottom: 20px;
       @media #{$md} {
         width: 100%;
       }
@@ -50,6 +51,13 @@
     }
     .b__gtk__col.left {
       order: 1;
+    }
+    .btn {
+      display: flex;
+      max-width: 300px;
+      @media #{$xs} {
+        max-width: 100%;
+      }
     }
   }
 }

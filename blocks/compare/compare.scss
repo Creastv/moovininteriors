@@ -94,6 +94,7 @@
         transform: translate(-50%, 0);
         display: flex;
         width: calc(100% - 60px);
+        padding: 15px 20px;
         @media #{$md} {
           position: inherit;
           left: inherit;
@@ -101,7 +102,13 @@
           // width: 100%;
           padding: 15px 25px;
           justify-content: center;
+          width: 100%;
+          padding: 20px 30px;
         }
+        // @media #{$sm} {
+        //   width: 100%;
+        //   padding: 20px 30px;
+        // }
       }
     }
   }

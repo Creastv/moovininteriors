@@ -104,6 +104,7 @@
   transform: translate(-50%, 0);
   display: flex;
   width: calc(100% - 60px);
+  padding: 15px 20px;
 }
 @media only screen and (max-width: 998px) {
   .b-compare .packs .top .btn {
@@ -112,5 +113,7 @@
     transform: translate(0, 0);
     padding: 15px 25px;
     justify-content: center;
+    width: 100%;
+    padding: 20px 30px;
   }
 }/*# sourceMappingURL=compare.css.map */
