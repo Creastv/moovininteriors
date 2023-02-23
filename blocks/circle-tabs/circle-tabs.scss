@@ -17,25 +17,46 @@
   .tab {
     position: relative;
     text-align: center;
-    .tab-content {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      text-align: center;
-      margin-bottom: 2vw;
-      h3 {
-        font-size: 28px;
-        font-size: 2vw;
-        // width: 50%;
-        margin: 0 auto;
-        margin-bottom: 20px;
+    .tabs-content-container {
+      .tab-content {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+        margin-bottom: 2vw;
+        display: none;
+        h3 {
+          font-size: 28px;
+          font-size: 2vw;
+          // width: 50%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+        p {
+          // width: 80%;
+          margin: 0 auto;
+          font-size: 1.3vw;
+          line-height: 1.6vw;
+        }
       }
-      p {
-        // width: 80%;
-        margin: 0 auto;
-        font-size: 1.3vw;
-        line-height: 1.6vw;
+      .active-tab {
+        display: block;
+      }
+    }
+    .tabs-container {
+      .ico {
+        cursor: pointer;
+        display: block;
+      }
+      .active-tab {
+        path,
+        text {
+          fill: $main;
+        }
+        text {
+          font-weight: 700;
+        }
       }
     }
   }

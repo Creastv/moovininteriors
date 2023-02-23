@@ -15,22 +15,37 @@
   position: relative;
   text-align: center;
 }
-.b-circle-tabs .tab .tab-content {
+.b-circle-tabs .tab .tabs-content-container .tab-content {
   position: absolute;
   bottom: 30px;
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
   margin-bottom: 2vw;
+  display: none;
 }
-.b-circle-tabs .tab .tab-content h3 {
+.b-circle-tabs .tab .tabs-content-container .tab-content h3 {
   font-size: 28px;
   font-size: 2vw;
   margin: 0 auto;
   margin-bottom: 20px;
 }
-.b-circle-tabs .tab .tab-content p {
+.b-circle-tabs .tab .tabs-content-container .tab-content p {
   margin: 0 auto;
   font-size: 1.3vw;
   line-height: 1.6vw;
+}
+.b-circle-tabs .tab .tabs-content-container .active-tab {
+  display: block;
+}
+.b-circle-tabs .tab .tabs-container .ico {
+  cursor: pointer;
+  display: block;
+}
+.b-circle-tabs .tab .tabs-container .active-tab path,
+.b-circle-tabs .tab .tabs-container .active-tab text {
+  fill: #5f031f;
+}
+.b-circle-tabs .tab .tabs-container .active-tab text {
+  font-weight: 700;
 }/*# sourceMappingURL=circle-tabs.css.map */

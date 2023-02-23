@@ -224,7 +224,9 @@ function register_acf_block_types() {
       'supports' => array( 'align' =>false ),
       
       'enqueue_assets'    => function(){
-            wp_enqueue_style( 'go-circle-tabs',  get_template_directory_uri() . '/blocks/circle-tabs/circle-tabs.min.css' );
+          wp_enqueue_style( 'go-circle-tabs',  get_template_directory_uri() . '/blocks/circle-tabs/circle-tabs.min.css' );
+          wp_enqueue_script('go-circle-js', get_template_directory_uri() .'/blocks/circle-tabs/auto-tabs.js',  array(), '20130456', true );
+          wp_enqueue_script('go-circle-init', get_template_directory_uri() .'/blocks/circle-tabs/index.js',  array(), '20130456', true );
       },
     ));
 
@@ -287,7 +289,7 @@ function register_acf_block_types() {
         ],
         'enqueue_assets'    => function(){
             wp_enqueue_style( 'go-container',  get_template_directory_uri() . '/blocks/container/container.min.css', '20130456', true  );
-      },
+        },
     ));
 }
 if( function_exists('acf_register_block_type') ) {
