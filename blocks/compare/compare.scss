@@ -36,6 +36,9 @@
         border-radius: 6px;
         padding: 30px;
         height: 100%;
+        @media #{$lg} {
+          padding: 30px 20px;
+        }
         .pack-item__header {
           text-align: center;
           h3 {
@@ -76,6 +79,7 @@
           text-align: center;
           h3 {
             font-size: 27px;
+            text-transform: uppercase;
             color: $main;
           }
         }

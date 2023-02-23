@@ -45,6 +45,11 @@
   padding: 30px;
   height: 100%;
 }
+@media only screen and (max-width: 1300px) {
+  .b-compare .packs .pack-item .pack-item__wraper {
+    padding: 30px 20px;
+  }
+}
 .b-compare .packs .pack-item .pack-item__wraper .pack-item__header {
   text-align: center;
 }
@@ -90,6 +95,7 @@
 }
 .b-compare .packs .top .pack-item__wraper .pack-item__header h3 {
   font-size: 27px;
+  text-transform: uppercase;
   color: #5f031f;
 }
 .b-compare .packs .top .pack-item__wraper ul li {

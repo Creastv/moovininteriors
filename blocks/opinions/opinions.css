@@ -20,6 +20,7 @@
 @media only screen and (max-width: 768px) {
   .b-opi .b-opi__wraper .b-opi__col {
     width: 100%;
+    text-align: center;
   }
 }
 .b-opi .b-opi__wraper .b-opi__col:nth-child(2) {
@@ -29,11 +30,17 @@
 @media only screen and (max-width: 768px) {
   .b-opi .b-opi__wraper .b-opi__col:nth-child(2) {
     width: 100%;
+    text-align: left;
   }
 }
 .b-opi .b-opi__resumen {
   display: flex;
   gap: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .b-opi .b-opi__resumen {
+    justify-content: center;
+  }
 }
 .b-opi .b-opi__resumen .b-opi__resumen__item {
   text-align: center;

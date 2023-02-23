@@ -15,12 +15,14 @@
     .b-opi__col {
       @media #{$sm} {
         width: 100%;
+        text-align: center;
       }
       &:nth-child(2) {
         position: relative;
         width: 70%;
         @media #{$sm} {
           width: 100%;
+          text-align: left;
         }
       }
     }
@@ -28,6 +30,9 @@
   .b-opi__resumen {
     display: flex;
     gap: 30px;
+    @media #{$sm} {
+      justify-content: center;
+    }
     .b-opi__resumen__item {
       text-align: center;
       span {
