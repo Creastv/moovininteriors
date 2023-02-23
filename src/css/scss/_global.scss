@@ -22,7 +22,10 @@ body {
   width: 85%;
   margin: 0 auto;
   @media #{$lg} {
-    width: 95%;
+    width: 90%;
+  }
+  @media #{$sm} {
+    width: 100%;
   }
   .row {
     padding-left: 15px;

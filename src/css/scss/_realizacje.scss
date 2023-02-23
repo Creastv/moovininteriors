@@ -172,4 +172,18 @@
   .go__bg__two {
     z-index: 2;
   }
+  .swiper-pagination {
+    text-align: left;
+    position: relative;
+    margin-top: 50px;
+    display: block;
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+      border: 2px solid #fff;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $main;
+    }
+  }
 }
