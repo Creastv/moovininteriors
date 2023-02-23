@@ -48,6 +48,10 @@
       .ico {
         cursor: pointer;
         display: block;
+        text {
+          font-size: 21px;
+          margin-left: -110px;
+        }
       }
       .active-tab {
         path,
@@ -56,6 +60,45 @@
         }
         text {
           font-weight: 700;
+        }
+        circle {
+          cx: 10;
+          cy: 10;
+          r: 10;
+          fill: $main;
+        }
+      }
+    }
+  }
+  .mobile-tabs {
+    ul {
+      position: relative;
+      list-style: none;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 16px;
+        width: 1px;
+        height: 100%;
+        background-color: #5f031f;
+      }
+      li {
+        position: relative;
+        margin-bottom: 10px;
+        &:before {
+          content: "";
+          position: absolute;
+          transform: translate(0, 5px);
+          left: -31px;
+          width: 16px;
+          height: 16px;
+          border-radius: 100%;
+          border: 3px solid #fff;
+          background-color: #5f031f;
+        }
+        h3 {
+          margin-bottom: 10px;
         }
       }
     }

@@ -14,6 +14,7 @@ $tabs = get_field( 'tabs' );
             <?php echo $desc; ?>
             <?php } ?>
         </div>
+        <?php if(!wp_is_mobile()) { ?>
         <?php if($tabs) { ?>
         <div class=" b-circle-tabs__col">
             <div class="tab" id="tabs">
@@ -24,27 +25,6 @@ $tabs = get_field( 'tabs' );
                         <p><?php echo $tab['content_tabs']['desc']; ?></p>
                     </div>
                     <?php $i++; } ?>
-                    <!-- <div class="tab-content active-tab" data-tab-content="tab1">
-                        <h3>Proces projektowy1</h3>
-                        <p>doświadczony zespół architektów opracujeukład funkcjonalny, projekt i wizualizacje</p>
-                    </div>
-                    <div class="tab-content" data-tab-content="tab2">
-                        <h3>Proces projektowy2</h3>
-                        <p>doświadczony zespół architektów opracujeukład funkcjonalny, projekt i wizualizacje</p>
-                    </div>
-                    <div class="tab-content " data-tab-content="tab3">
-                        <h3>Proces projektowy3</h3>
-                        <p>doświadczony zespół architektów opracujeukład funkcjonalny, projekt i wizualizacje</p>
-                    </div>
-                    <div class="tab-content " data-tab-content="tab4">
-                        <h3>Proces projektowy4</h3>
-                        <p>doświadczony zespół architektów opracujeukład funkcjonalny, projekt i wizualizacje</p>
-                    </div>
-                    <div class="tab-content " data-tab-content="tab5">
-                        <h3>Proces projektowy5</h3>
-                        <p>doświadczony zespół architektów opracujeukład funkcjonalny, projekt i wizualizacje</p>
-                    </div> -->
-
                 </div>
                 <div class="tabs-container">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1263.98" height="432.965" viewBox="0 0 1263.98 432.965">
@@ -125,6 +105,23 @@ $tabs = get_field( 'tabs' );
 
             </div>
         </div>
+        <?php } ?>
+        <?php } ?>
+        <?php if(wp_is_mobile()) { ?>
+        <?php if($tabs) { ?>
+        <div class="b-circle-tabs__col">
+            <div class="mobile-tabs">
+                <ul>
+                    <?php foreach($tabs as $tab) { ?>
+                    <li>
+                        <h3><?php echo $tab['content_tabs']['title']; ?></h3>
+                        <p><?php echo $tab['content_tabs']['desc']; ?></p>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+        <?php } ?>
         <?php } ?>
     </div>
 </div>

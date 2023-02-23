@@ -42,10 +42,51 @@
   cursor: pointer;
   display: block;
 }
+.b-circle-tabs .tab .tabs-container .ico text {
+  font-size: 21px;
+  margin-left: -110px;
+}
 .b-circle-tabs .tab .tabs-container .active-tab path,
 .b-circle-tabs .tab .tabs-container .active-tab text {
   fill: #5f031f;
 }
 .b-circle-tabs .tab .tabs-container .active-tab text {
   font-weight: 700;
+}
+.b-circle-tabs .tab .tabs-container .active-tab circle {
+  cx: 10;
+  cy: 10;
+  r: 10;
+  fill: #5f031f;
+}
+.b-circle-tabs .mobile-tabs ul {
+  position: relative;
+  list-style: none;
+}
+.b-circle-tabs .mobile-tabs ul:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  width: 1px;
+  height: 100%;
+  background-color: #5f031f;
+}
+.b-circle-tabs .mobile-tabs ul li {
+  position: relative;
+  margin-bottom: 10px;
+}
+.b-circle-tabs .mobile-tabs ul li:before {
+  content: "";
+  position: absolute;
+  transform: translate(0, 5px);
+  left: -31px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  background-color: #5f031f;
+}
+.b-circle-tabs .mobile-tabs ul li h3 {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=circle-tabs.css.map */
