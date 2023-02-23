@@ -1351,6 +1351,10 @@ body.active {
   background-color: #5f031f;
   color: #fff;
 }
+.realization-gallery {
+  display: none;
+  margin-bottom: 50px;
+}
 .realization-gallery .wr {
   float: left;
   width: 50%;
@@ -1362,6 +1366,50 @@ body.active {
 .realization-gallery .wr img {
   width: 100%;
   height: auto;
+}
+
+.mieszkania-template-default #header {
+  position: absolute;
+}
+
+.header-slider {
+  position: relative;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.header-slider .slide-wraper {
+  height: 700px;
+  width: 100%;
+}
+.header-slider .slide-wraper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-slider .slide-wraper__content {
+  position: absolute;
+  z-index: 55;
+  bottom: 0px;
+  width: 100%;
+}
+.header-slider .slide-wraper__content h1 {
+  color: #fff;
+}
+.header-slider .scroll-down {
+  z-index: 3;
+}
+.header-slider .go__bg,
+.header-slider .go__bg__two {
+  z-index: 2;
 }
 
 .btn {
